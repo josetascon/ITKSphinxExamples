@@ -18,7 +18,7 @@ macro(add_example example_name)
   if(BUILD_DOCUMENTATION)
     if(SPHINX_HTML_OUTPUT)
       add_custom_target(${example_name}DownloadableArchive
-        COMMAND ${PYTHON_EXECUTABLE} ${ITKSphinxExamples_SOURCE_DIR}/Utilities/CreateDownloadableArchive.py
+        COMMAND ${Python3_EXECUTABLE} ${ITKSphinxExamples_SOURCE_DIR}/Utilities/CreateDownloadableArchive.py
           ${example_name} ${SPHINX_DESTINATION}
         WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
         COMMENT "Creating downloadable archive for ${example_name}"
